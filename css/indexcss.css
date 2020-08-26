@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Press+Start+2P&display=swap');
+
+body {
+    background-color: #000000;
+}
+
+.intro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p
+{
+    color: #2ce000;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.1em;
+}
+
+h1 {
+    color: #2ce000;
+    font-family: 'Press Start 2P';
+    font-size: 2.5em;
+}
+
+a:link {
+    color: #2ce000;
+    text-decoration-line: underline;
+}
+
+a:visited {
+    color: #146600;
+    text-decoration-line: underline;
+}
+
+a:hover {
+    color: darkgoldenrod;
+    text-decoration-line: overline underline;
+
+}
+
+a:active {
+    color: darkgoldenrod;
+    text-decoration-line: line-through;
+}

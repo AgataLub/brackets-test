@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Press+Start+2P&display=swap');
+
+body {
+    background-color: #000000;
+}
+
+p,
+ul,
+ol,
+figure,
+cite {
+    color: #2ce000;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.1em;
+}
+
+p {
+    text-indent: 1em;
+}
+
+ul {
+    list-style-type: square;
+}
+
+h1 {
+    color: #2ce000;
+    font-family: 'Press Start 2P';
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #2ce000;
+    font-family: 'Press Start 2P';
+    font-size: 2em;
+}
+
+blockquote {
+    color: #2ce000;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.5em;
+}
+
+q {
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+main,
+aside,
+footer,
+header {
+    border: 2px #2ce000 solid;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 10px 10px #2ce000;
+    background: #000000;
+}
+
+footer {
+
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    padding: 40px;
+}
+
+nav ol {
+    list-style-type: none;
+    margin: 10px;
+    padding: 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0px;
+}
+
+li {
+    margin-left: 0.5em;
+}
+
+header nav a {
+    font-family: "Press Start 2P", monospace;
+    font-size: 2em;
+}
+
+a:link {
+    color: #2ce000;
+    text-decoration-line: underline;
+}
+
+a:visited {
+    color: #146600;
+    text-decoration-line: underline;
+}
+
+a:hover {
+    color: darkgoldenrod;
+    text-decoration-line: overline underline;
+
+}
+
+a:active {
+    color: darkgoldenrod;
+    text-decoration-line: line-through;
+}
+
+img {
+    float: right;
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+figure {
+    border: 1px #2ce000 solid;
+    padding: 2px;
+    font-style: italic;
+    display: table;
+    margin: 0 auto;
+}
+
+figure img {
+    align-self: center;
+}
+
+figcaption {
+    padding-top: 2px;
+    margin: 1px;
+    border: 1px #2ce000 solid;
+    display: table-caption;
+    caption-side: bottom;
+}
+
+cite {
+    text-align: right;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+/* MEDIA SPECIFIC GRID LAYOUT */
+@media only screen and (min-width: 900px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "hd hd hd"
+            "mn mn ad"
+            "mn mn ad"
+            "mn mn ."
+            ". ft .";
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "hd hd"
+            "mn ad"
+            "mn ."
+            "ft ft";
+    }
+}
+
+
+@media only screen and (max-width: 599px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "hd"
+            "ad"
+            "mn"
+            "ft";
+    }
+}
+
+/* Grid area names defined here */
+header {
+    grid-area: hd;
+}
+
+main {
+    grid-area: mn;
+}
+
+aside {
+    grid-area: ad;
+}
+
+footer {
+    grid-area: ft;
+}
